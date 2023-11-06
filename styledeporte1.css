@@ -1,0 +1,16 @@
+
+/*pagina web*/
+body{
+    background-color: rgb(10, 50, 82);
+    
+}
+
+#titulo{
+    position: fixed;
+    left: 200px;
+    top: 0px;
+    text-align: center;
+    width: 500px;
+    margin:  auto;
+    background-color: rgba(233, 233, 227, 0.401);
+}
