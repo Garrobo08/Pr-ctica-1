@@ -1,10 +1,27 @@
-body{
+/*Vamos a quitar el estilo que viene por defecto*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none; /*Quita las lineas que aparecen debajo de los enlaces*/
+    list-style: none; /*Quita los puntos de las listas*/
+}
+
+body {
     font-family: Georgia, 'Times New Roman', Times, serif;
     color: #333;
     font-size: 1.2rem;
     line-height: 1.6em;
+    /* background-color: #030303; */
 }
-.header{
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;/*Esto que para cuando llegue a más de 1200px se mantega así*/
+}
+
+/*CABECERA*/
+.header {
     background-color: #333;
     color: white;
     padding: 2rem 0;
@@ -15,35 +32,39 @@ body{
     right: 0;
 }
 
-  .header a{
+  .header a {
       color: white;
       text-decoration: none;
     }
 
-.logo-nav-container{
-    display: flex;
+.logo-nav-container {
+    position: relative; /*esto no estaba antes mejor ABSOLUTE*/
+    display: flex; 
     justify-content: space-between;
+    align-items: center;
     /*Lo que hacemos es que un elemento se vaya a la izquierda y el otro a la derecha y se extienda el espacio*/
     align-items: center;
     flex-wrap: wrap;/*Si tiene más ancho del permitido se pasa a ala linea de abajp*/
 }
 
-.logo{
+.logo {
     letter-spacing: 15px;
-    font-size: 1.4em;
+    font-size: 35px;
 }
 
 .navegation ul {
    margin: 0;
    padding: 0;
-   list-style: none;
-}
+   display: flex;
+   justify-content: space-between;
+} 
 
-.navegation ul li{
+.navegation ul li {
     display: inline-block;
 }
 
 .navegation ul li a {
+      font-size: 22px;
       display: block;
       padding: 0.5rem 1rem;
       transition: all 0.4s linear;
@@ -55,15 +76,98 @@ body{
 
         }
 
-.main{
-    padding: 12rem;
+/*CUERPO DE LA PAGINA WEB*/
+.sport {
+    padding: 160px 0 0 0;
+    display: flex;
+    flex-direction: column;
+}
+
+h2 {
+    font-size: 35px;
+    margin-bottom: 20px;
+}
+
+hr {
+    border: 1px solid red;
+    width: 50%;
+    margin-bottom: 40px;
+}
+
+.box-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 40px;
+}
+
+.box-1 {
+    border-radius: 5px;
+    z-index: 1000;
+}
+
+/*PIE DE PAGINA*/
+
+.new-element{
+    margin-top: 40px;
+    border-width: 5px ;
+    padding: 10px 25px;
+    color: red;
+    border: 5px groove red ;
+    background-color: black;
+    border-radius: 15px;
+    font-size: 16px;
+    cursor: pointer;
+    align-self: flex-end;
+    text-align: 
+}
+
+.new-element:hover {
+    background-color: white;
+    color: black;
+}
+
+.inicio{
+    margin-top: 40px;
+    border-width: 5px ;
+    padding: 10px 25px;
+    color: red;
+    border: 5px groove red ;
+    background-color: black;
+    border-radius: 15px;
+    font-size: 16px;
+    cursor: pointer;
+    align-self: flex-end;
+    text-align: 
+}
+
+.inicio:hover {
+    background-color: white;
+    color: black;
 }
 .footer {
     background: #f2f2f2;
     padding: 4rem 0;
-    text-align: center;
+    text-align: right;
     margin-top: 6rem;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 @media only screen and (max-width: 767px) {
     
