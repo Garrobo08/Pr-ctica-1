@@ -5,8 +5,11 @@
 .col{
     margin: 5px;
 }
-img{
-    width: 6px;
-    height:4px;
-
+.img{
+    width:15;
+    height:30;
+}
+.a{
+    text-decoration:underline;
+    
 }
