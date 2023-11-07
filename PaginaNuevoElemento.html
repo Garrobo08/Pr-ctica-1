@@ -13,23 +13,28 @@
 
 <body>
   <section class = "container">
-    <div class = "row my-5"></div>
-    <!--CONTENIDO-->
-       <form action="" method="POST">
+    <div class = "row my-5">
+    <!--------------------------CONTENIDO-------------------------------->
+    <div class = "col-sm-12 col-md-12 col-lg-12">  
+     <form action="" method="POST">
+        <h3 class = "display-5 text-primary text-center">REGISTRO NUEVO DEPORTE</h3>
         <!--Se llama label a cada título de cada apartado por ejemplo el nombre, o el correo-->
         <!--titulo de cada campo-->
         <div class = "form-group"> <!--Con los div lo que hacemos es que dan un salto de línea lo siguiente a lo que haya dentro-->
           <label> Nombre:</label> 
           <input type="text" placeholder="Introduce tu nombre copleto" maxlength="20" id = "nombre" name = "nombre" class = "form-control"> <!--La clase from control lo que es que da una estetica a la caja del formulario, ahora ocupa toda la pagina-->
         </div>
+
         <div class = "form-group">
           <label> Domicilio:</label> 
           <input type="text" placeholder="Intro domicilio"  maxlength="20" id = "direccion" name = "direccion" class = "form-control">
         </div>
+
         <div class = "form-group">
           <label> Numero de telefono:</label> 
           <input type="number" placeholder="Introduce numero de telefono"  id = "telefono" name = "telefono" class = "form-control">
         </div>
+
         <div class = "form-group">
           <label> Especialidad:</label> 
             <select name="tipo-deporte" id="tipo-deporte" class = "form-control">
@@ -41,22 +46,25 @@
               <option value="Deporte a motor">Deporte a motor</option>
             </select>
         </div>
-        <label></label>
 
-        <div>
-          <button type="">Guardar</button>
-          <button type= ""><a href="http://127.0.0.1:3000/Paginaprincipal.html">Cancelar</a></button>
+        <div class = "form-group">
+          <label>Agregue el archivo de su fotografía: </label>
+          <input type="file" class = "form-control">
+        </div>
+       
+
+        <div class = "form-group">
+          <button type="submit"  class = "btn btn-primary btn-block">Guardar</button> <!--btn... lo que da es color al boton-->
+          <a href="http://127.0.0.1:3000/Paginaprincipal.html" class = "btn btn-danger btn-block">Cancelar</a>
         </div>
     
-    </form>
-    <!--FIN DE CONTENIDO-->
+     </form>
+    </div>
+  </div> 
+    <!-----------------------------FIN DE CONTENIDO---------------------------------------------->
     <hr>
   </section>
   <footer class = "blockquote-footer text center">
-    <address>
-        <small class = "font-weight-bold text-uppercase">&copy; todos los derechos reservados</small><br>
-       <p class = "lead"> MARCO ANTONIO DORADO GOMEZ <br> LA PAZ - BOLIVIA</p>
-    </address>
   </footer> 
   
     
