@@ -1,0 +1,17 @@
+body {
+    background-image: url(fondo1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover; /*Para que se adecuae al tamaño total del navegador*/
+    background-attachment: fixed; /*Ponemos la imagen en un solo lugar*/
+    background-position: center;
+}
+
+.formucolor{
+    max-width: 25em;
+    padding: 1.3em;
+    margin: 0 auto;
+    background-color: rgbas(120,119,123, 0.3);
+    font-weight: bold;
+    border-radius: 0.5em;
+    box-shadow: inset 1px 1px 22px 4px rgba(0,0,0,0.85);
+}
