@@ -1,0 +1,95 @@
+body{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: #333;
+    font-size: 1.2rem;
+    line-height: 1.6em;
+}
+
+
+
+
+.header{
+    background-color: #333;
+    color: white;
+    padding: 2rem 0;
+
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+
+}
+
+  .header a{
+      color: white;
+      text-decoration: none;
+    }
+
+.logo-nav-container{
+    display: flex;
+    justify-content: space-between;
+    /*Lo que hacemos es que un elemento se vaya a la izquierda y el otro a la derecha y se extienda el espacio*/
+    align-items: center;
+    flex-wrap: wrap;/*Si tiene más ancho del permitido se pasa a ala linea de abajp*/
+}
+
+.logo{
+    letter-spacing: 15px;
+    font-size: 1.4em;
+}
+
+.navegation ul {
+   margin: 0;
+   padding: 0;
+   list-style: none;
+}
+
+.navegation ul li{
+    display: inline-block;
+}
+
+.navegation ul li a {
+      display: block;
+      padding: 0.5rem 1rem;
+      transition: all 0.4s linear;
+      border-radius: 5px;
+    }
+
+      .navegation ul li a:hover{
+         background: #4a4a4a;
+
+        }
+
+.main{
+    padding: 12rem;
+}
+.footer {
+    background: #f2f2f2;
+    padding: 4rem 0;
+    text-align: center;
+    margin-top: 6rem;
+}
+
+@media only screen and (max-width: 767px) {
+    
+    .navegation{
+        width: 100%;
+        margin-top: 1rem;
+    }
+
+    .navegation ul li{
+        display: block;
+    }
+    
+    .navegation ul li a {
+          display: block;
+          padding: 0.5rem 0;
+          transition: all 0.4s linear;
+          border-radius: 5px;
+        }
+        
+          .navegation ul li a:hover{
+             background: #4a4a4a;
+    
+            }
+}
