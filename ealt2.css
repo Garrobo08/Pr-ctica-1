@@ -1,13 +1,11 @@
-/* div{
+ /* div{
     border:solid 1px black;
-} */
+}  */
 /* Estilo de la cabecera */
 header{
     background-color: #333;
     font-size: 1.5rem;  /*Tamaño relativo de la fuente*/
     line-height: 1.6em;
-    color: white;
-    text-decoration: none;
     padding: 2rem 0;
     position: fixed;   /*Queremos que nos siga el bloque header y sus contenidos mientras bajamos en la página web.*/
     left: 0;
@@ -19,12 +17,17 @@ header{
     justify-content: space-between; /*Logo (<--), menu(-->), ocupando los dos extremos del contenedor*/
     align-items: center;
     flex-wrap: wrap; /*Si los elementos se superponen, el menu pasará a estar debajo. Es decir, logo y debajo la lista*/   
-
 }
 
 .logo{
     letter-spacing: 15px;
+    font-family: 'Times New Roman', Times, serif;
     font-size: 35px; 
+    color: white;
+    text-decoration: none;
+}
+.logo:hover{
+    text-shadow: 0 0 30px #fff;
 }
 .navegation ul{
     margin: 0;
@@ -32,17 +35,37 @@ header{
     display: flex;
     justify-content: space-between; 
 }
-
-
-
-
-/* Estilo del grid y sus elementos */
+.navegation ul li {
+    display: inline-block;
+}
+.navegation ul li a{
+    font-size: 22px;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    color: white;
+    text-decoration: none;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    transition-delay:all 0.4s linear ;
+}
+.navegation ul li a:hover{  /*Cuando el cursor esté encima de los elementos de la lista*/
+    background-color: #4a4a4a;
+    text-shadow: 0 0 30px #fff;
+}
+.container{
+    padding: 180px; /*Para que no se superponga ña barra del menu*/
+}
+/*ESTILO DEL TÍTULO*/
+.titulo{
+    font-family:fantasy;
+}
+/* ESTILO DEL GRID Y SUS ELEMENTOS*/
 .dep{
     display: flex;
     justify-content:center;
     align-items:center;
     height:70px;
     text-align: center;
+    font-family:fantasy;
 }
 .datos{
     display:block;
@@ -52,7 +75,21 @@ header{
 img{
     width:200px;
     height:280px;
-    border: solid black 1px 
+    /* border: solid black 1px;  */
+    
+}
+.imagen{
+    /* display: block; Para preguntar */
+    width:200px;
+    height:280px;
+    margin:auto;
+}
+.imagen:hover{  /*Estilo cuando el cursor esté encima de las imágenes*/
+    transition-delay: 0s, 0.5s; /*Esto es para marcar el tiempo que tarda en primro apararecer el color y luego el neon*/
+    
+    box-shadow: 
+               0 0 10px #4a4a4a,
+               0 0 30px #4a4a4a;    
 }
 
-
+/*PIE DE PÁGINA*/
