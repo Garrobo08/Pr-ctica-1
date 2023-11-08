@@ -1,0 +1,10 @@
+div{
+    border:solid 1px black;
+}
+.dep{
+    display: flex;
+    justify-content:center;
+    align-items:center;
+    height:70px;
+    text-align: center;
+}
