@@ -1,5 +1,5 @@
 body {
-    background-image: url(fondo1.jpg);
+    background-image: url(fondo3.jpg);
     background-repeat: no-repeat;
     background-size: cover; /*Para que se adecuae al tamaño total del navegador*/
     background-attachment: fixed; /*Ponemos la imagen en un solo lugar*/
