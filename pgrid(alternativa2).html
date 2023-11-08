@@ -1,6 +1,6 @@
 <!DOCTYPE html>
   <head>
-    <title>Ejercicio1</title>
+    <title>Práctica_1</title>
     <link type="text/css" rel="stylesheet" href="ealt2.css"/><!--Poner el css relacionado-->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -9,12 +9,12 @@
   </head>
   <body>
   <!--Creamos un contendor para todos los elementos de la página-->
-  <div class="container">
+  <div class="container">   <!--Toda la página web está conteida en un contenedor-->
     <!--Header de la página-->
     <div class="row"> <!--Queremos que ocupe todo el ancho del contenedor-->
         <header class="header">
-          <div class = "containter logo-nav-container">
-            <a href="link" class = "logo"> SPORTGO</a>
+          <div class = "menu" style="background-color: aqua;">
+            <a href="pgrid(alternativa2).html" class = "logo" style="background-color: blueviolet;"> SPORTGO</a> <!--Si clickas el logo/nombre de la página se recarga-->
             <!-- vamos a utiliza flexbox-->
             <nav class = "navegation">
               <ul>
@@ -26,21 +26,24 @@
               </ul>
             </nav>
           </div>
-        </headerv>  
+        </header>  
     </div>
-    <!--Main de la página Web-->
+    <!--Header de la página-->
+
+    <!--Título de la página Web-->
     <div class="row" id="r1">
         <main class = "main">
-            <section class = "sport container">
+            <section class = "titulo">
               <h1>Top 12 mejores Deportes</h1>
               <hr>
             </section>
         </main>
     </div>
-    <!--Tres primeros deportes-->
-    <div class="row"> <!--ROW PARA TODOS LOS DEPORTES-->
+
+    <!--ROW-->
+    <div class="row"> <!--ROW PARA TODOS LOS DEPORTES(para que se puedan adaptar mejor a distintos tamaños)-->
         <!--Dep1-->
-        <div class="col-xl-3 col-md-4"> 
+        <div class="col-xl-3 col-md-4 col-sm-6"> 
             <div class="dep">
                 <h3>Deporte acuático</h3><!--Deporte 1-->
             </div>
@@ -51,7 +54,7 @@
         </div>  <!--Dep1-->
            
         <!--Dep2-->
-        <div class="col-xl-3 col-md-4"> 
+        <div class="col-xl-3 col-md-4 col-sm-6"> 
             <div class="dep">
                 <h3>Deporte de invierno</h3><!--Deporte 2-->
             </div>
@@ -62,7 +65,7 @@
         </div>  <!--Dep2-->
 
         <!--Dep3-->
-        <div class="col-xl-3 col-md-4"> 
+        <div class="col-xl-3 col-md-4 col-sm-6"> 
             <div class="dep">
                 <h3>Deporte sobre ruedas</h3><!--Deporte 3-->
             </div>
@@ -73,7 +76,7 @@
         </div>  <!--Dep3-->
 
         <!--Dep4-->
-        <div class="col-xl-3 col-md-4"> 
+        <div class="col-xl-3 col-md-4 col-sm-6"> 
             <div class="dep">
                 <h3>Deporte de contacto</h3><!--Deporte 4-->
             </div>
@@ -84,7 +87,7 @@
         </div>  <!--Dep4-->
 
         <!--Dep5-->
-        <div class="col-xl-3 col-md-4"> 
+        <div class="col-xl-3 col-md-4 col-sm-6"> 
             <div class="dep">
                 <h3>Deporte de correr</h3><!--Deporte 5-->
             </div>
@@ -95,18 +98,18 @@
         </div>  <!--Dep5-->
         
         <!--Dep6-->
-        <div class="col-xl-3 col-md-4"> 
+        <div class="col-xl-3 col-md-4 col-sm-6"> 
             <div class="dep">
                 <h3>Deporte de elasticidad</h3><!--Deporte 6-->
             </div>
             <div class = "datos">
-                  <img src="Gimansia Artística.jpeg.jpg" alt="Gimansia Artística">
+                  <img src="Gimansia Artística.jpeg" alt="Gimansia Artística">
                   <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
             </div>
         </div>  <!--Dep6-->
 
         <!--Dep7-->
-        <div class="col-xl-3 col-md-4"> 
+        <div class="col-xl-3 col-md-4 col-sm-6"> 
             <div class="dep">
                 <h3>Deporte sobre ruedas</h3><!--Deporte 7-->
             </div>
@@ -117,7 +120,7 @@
         </div>  <!--Dep7-->
         
         <!--Dep8-->
-        <div class="col-xl-3 col-md-4"> 
+        <div class="col-xl-3 col-md-4 col-sm-6"> 
             <div class="dep">
                 <h3>Deporte acuático</h3><!--Deporte 8-->
             </div>
@@ -128,18 +131,18 @@
         </div>  <!--Dep 8-->
 
         <!--Dep9-->
-        <div class="col-xl-3 col-md-4"> 
+        <div class="col-xl-3 col-md-4 col-sm-6"> 
             <div class="dep">
                 <h3>Deporte de contacto</h3><!--Deporte 9-->
             </div>
             <div class = "datos">
-                  <img src="Boxeos.jpg" alt="Boxeo">
+                  <img src="boxeo.jpg" alt="Boxeo">
                   <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
             </div>
         </div>  <!--Dep9-->
 
         <!--Dep10-->
-        <div class="col-xl-3 col-md-4"> 
+        <div class="col-xl-3 col-md-4 col-sm-6"> 
             <div class="dep">
                 <h3>Deporte de elasticidad</h3><!--Deporte 10-->
             </div>
@@ -150,7 +153,7 @@
         </div>  <!--Dep10-->
 
         <!--Dep11-->
-        <div class="col-xl-3 col-md-4">
+        <div class="col-xl-3 col-md-4 col-sm-6">
             <div class="dep">
                 <h3>Deporte de Riesgo</h3><!--Deporte 11-->
             </div>
@@ -161,7 +164,7 @@
         </div>  <!--Dep11-->
 
          <!--Dep12-->
-         <div class="col-xl-3 col-md-4"> 
+         <div class="col-xl-3 col-md-4 col-sm-6"> 
             <div class="dep">
                 <h3>Deporte motor</h3><!--Deporte-->
             </div>
