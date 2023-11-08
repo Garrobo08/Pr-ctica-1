@@ -109,7 +109,8 @@ hr {
 
 /*PIE DE PAGINA*/
 
-.new-element{
+
+/* .new-element{
     margin-top: 40px;
     border-width: 5px ;
     padding: 10px 25px;
@@ -144,9 +145,10 @@ hr {
 .inicio:hover {
     background-color: white;
     color: black;
-}
+} */
 .footer {
-    background: #f2f2f2;
+    background: #1a0321; 
+    /*#f2f2f2;*/
     /* padding: 4rem 0; */
     text-align: right;
     margin-top: 6rem;
