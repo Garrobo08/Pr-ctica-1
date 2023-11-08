@@ -29,6 +29,10 @@ header{
 .logo:hover{
     text-shadow: 0 0 30px #fff;
 }
+.foto-logo{
+    height: 50px;
+    margin-right: 10px;
+}
 .navegation ul{
     margin: 0;
     padding: 0;
@@ -52,7 +56,7 @@ header{
     text-shadow: 0 0 30px #fff;
 }
 .container{
-    padding: 180px; /*Para que no se superponga ña barra del menu*/
+    padding: 180px; /*Para que no se superponga la barra del menu*/
 }
 /*ESTILO DEL TÍTULO*/
 .titulo{
