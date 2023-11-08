@@ -29,6 +29,12 @@ header{
 .logo:hover{
     text-shadow: 0 0 30px #fff;
 }
+
+.foto-logo{
+    width: 90px;
+    height: 90px;
+    /* margin-left: -10px ; */
+}
 .navegation ul{
     margin: 0;
     padding: 0;
