@@ -1,0 +1,272 @@
+ /* div{
+    border:solid 1px black;
+}     */
+
+
+/*ESTILO DEL HEADER*/
+.header{
+    background-color: #141c43;
+    font-size: 1.8rem;  /*Tamaño relativo de la fuente 16px*0.8*/
+    line-height: 1.1rem;
+    padding: 1.2rem 0;
+}
+.menu{   /*Contiene el logo y los botones, que de momento no llevan a ningún sitio*/
+    display: flex;
+    justify-content: space-around; /*Logo (<--), menu(-->), ocupando los dos extremos del contenedor*/
+    align-items: center;
+    flex-wrap:wrap; /*Si los elementos se superponen, el menu pasará a estar debajo. Es decir, logo y debajo la lista*/   
+}
+.logo-encabezado{
+    display:flex;
+    align-items: center;
+    justify-content:center;
+    flex-wrap: wrap;
+}
+.logo{
+    margin-left: 10px;
+    letter-spacing: 15px;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 1.4em;
+    color: white;
+    text-decoration: none;
+}
+
+.logo:hover{
+    text-shadow: 0 0 30px #fff;
+}
+
+.foto-logo{
+    width: 90px;
+    height: 90px;
+    /* margin-left: -10px ; */
+}
+
+.navegation ul{
+    margin: 0;
+    padding: 0;
+    display: inline-flex;
+    justify-content:space-evenly; 
+    flex-wrap: wrap;
+}
+.navegation ul li {
+    display: inline-block;
+    padding: 10px;
+}
+.navegation ul li a{
+    font-size: 0.8em;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    color: white;
+    text-decoration: none;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    transition-delay:all 0.4s linear ;
+}
+.navegation ul li a:hover{  /*Cuando el cursor esté encima de los elementos de la lista*/
+    background-color: #1a2352;
+    text-shadow: 0 0 30px #fff;
+}
+/*____________________________________________________________________________________________*/
+.container{
+    margin-top: 10px; /*Para que no se superponga ña barra del header*/
+    margin-bottom: 60px; /*Para que no se superponga con el footer*/
+}
+/*ESTILO DEL TÍTULO*/
+.fondo{
+    height:150px;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(rgb(0 0 0 / .5),rgb(0 0 0 / .5)),url(/hockeytitulo.jpg); 
+    background-size: cover; /*Se adapta al tamaño del elemento*/
+    background-position:bottom;    /*Se centra el fondo*/
+    border-radius: 5px;
+}
+
+.row#tit{
+    position: relative;
+    text-align: center;
+    font-family:'Times New Roman', Times, serif;
+
+    color: white;
+    justify-content: center;
+}
+/*____________________________________________________________________________________________*/
+/* ESTILO INFO*/
+.row#info{
+    justify-content: center;
+    padding:20px;
+}
+.info{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: black;
+    font-size: 1.2em;
+}
+.info h2{
+    font-weight: bolder;
+    color: #141c43;
+    font-style:oblique;
+}
+.row#categoria{
+    margin-bottom: 15px;
+    /* border: solid #141c43;
+    background-color:rgba(20,28,67, 0.8); */
+    color: #000000;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.row#categoria .col-lg-6{
+    border: solid;
+}
+.row#categoria h3{
+    text-align: center;
+}
+.row#categoria .col-12{
+    border-top: solid;
+    border-left: solid;
+    border-right: solid;
+    align-items: center;
+}
+.row#categoria h2{
+    text-align: center;
+    color: #000000;
+}
+/*____________________________________________________________________________________________*/
+/* ESTILO REGLAS*/
+.reglas{
+    font-family: 'Times New Roman', Times, serif;
+    font-size:1.3rem;
+}
+.reglas h2{
+    text-decoration: underline;
+    font-weight: bolder;
+    color: #141c43;
+}
+.reglas ul{
+    display: flex;
+    flex-wrap: wrap;
+
+}
+.reglas li{
+    color: black;
+    line-height: 1.5em;
+    font-size:0.85em;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+.negrita{
+    font-weight: bold;
+}
+.equipos{
+    display:inline;
+
+    justify-content:space-around;
+}
+
+/*____________________________________________________________________________________________*/
+/* ESTILO IMAGEN ABAJO*/
+.row#subelementos{
+    display:flex;
+    flex-wrap: wrap-reverse;
+    align-items: center; 
+}
+
+.img-fluid#h1{
+    border-radius: 5px;
+}
+.imagen{
+    position: relative;
+    display: flex;
+}
+.nombre{
+    position: absolute;
+    inset:0;
+    color: #141c43;
+    font-family: fantasy;
+    text-align: center;
+    font-size: 1.6rem;
+    padding:1rem;
+    background:rgb(255,255,255, .6);
+    display: flex;
+    flex-wrap:wrap;
+    justify-content: center;
+    align-items: center;
+}
+.nommbre p{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 1em;
+
+}
+.img-fluid#h1, .nombre{
+    transition:150ms ease-in-out;
+}
+.imagen > .nombre{
+    opacity: 0;
+}
+.imagen:hover > .nombre{
+    opacity: 1;
+}
+/*____________________________________________________________________________________________*/
+/*BOTONES*/
+.col#boton{
+    padding-top: 15px;
+    display:flex;
+    justify-content: end;
+}
+.boton {
+    border: 2px solid #141c43;
+    border-radius: 5px;
+    position: relative;
+    display: block;
+    font-size: .8em;
+    letter-spacing: .1em;
+    color: #141c43;
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 10px 30px;
+    transition: 1s;
+    z-index: 1;
+    overflow: hidden;
+    transition: color 1s;
+}
+.boton:hover {
+    color: white;
+    transition-delay: 0s, 0.2s; /*Esto es para marcar el tiempo que tarda en primro apararecer el color y luego el neon*/
+    box-shadow: 
+               0 0 10px #1a2352,
+               0 0 20px #1a2352,
+               0 0 40px #1a2352,
+               0 0 80px #1a2352,
+               0 0 160px #1a2352;
+} 
+.boton::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -15px; /*Posición del objeto de atrás*/
+    width: 0;
+    height: 110%;
+    background: #141c43;
+    transform: skewX(35deg);
+    z-index: -1;
+    transition: 0.7s;
+} 
+.boton:hover:before{
+    width: 140%;    /*Tamño relativo del elemmento de detrás. Por los desplazamientos y giros hacemos que sea un poco más grande para que llene el botón*/
+} 
+
+/*____________________________________________________________________________________________*/
+/*PIE DE PÁGINA*/
+.footer{
+    background-color: #141c43;
+    padding: 3rem;
+    position: relative;
+    bottom: 0;
+}
+.notas{
+    color:white;
+    font-size: small;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-align: center;
+}
+.notas p{
+    line-height:normal;
+}
