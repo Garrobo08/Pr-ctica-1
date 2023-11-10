@@ -105,12 +105,24 @@
     display: flex;
     justify-content: center;
     padding: 10px;
+    text-align: center;
+    align-items: center;
 }
-.info .col-md-9#tipo{
+.info .col-md-5#tipo{
     border: 1px solid #fff;
     display: flex;
     justify-content: center;
     padding: 10px;
+    text-align: center;
+    align-items: center;
+}
+.info .col-md-4#num{
+    border: 1px solid #fff;
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    text-align: center;
+    align-items: center;
 }
 /*____________________________________________________________________________________________*/
 /* ESTILO INFO*/
