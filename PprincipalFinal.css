@@ -1,10 +1,7 @@
-body{
-    background-image: url(fondo8.png);
-    background-repeat: no-repeat;
-    background-size: cover; /*Para que se adecuae al tamaño total del navegador*/
-    background-attachment: fixed; /*Ponemos la imagen en un solo lugar*/
-    background-position: center; 
-}
+ /* div{
+    border:solid 1px black;
+}     */
+
 /* ESTILO DE LA CABECERA */
 .header{
     background-color: #141c43;
@@ -15,8 +12,6 @@ body{
     left: 0;
     top: 0;
     right: 0;
-    z-index: 2; /*Para que un elemento no se superponga con otro elemento que tenga tambien posicionamiento */
-
 }
 .menu{   /*Contiene el logo y los botones, que de momento no llevan a ningún sitio*/
     display: flex;
@@ -74,47 +69,83 @@ body{
     text-shadow: 0 0 30px #fff;
 }
 .container{
-    margin-top: 50px; /*Para que no se superponga ña barra del header*/
-    margin-bottom: 100px; /*Para que no se superponga con el footer*/
+    margin-top: 40px; /*Para que no se superponga ña barra del header*/
+    margin-bottom: 80px; /*Para que no se superponga con el footer*/
 }
 /*____________________________________________________________________________________________*/
 /*ESTILO DEL TÍTULO*/
-/*____
-________________________________________________________________________________________*/
-/*ESTILO DEL FORMULARIO*/
-
-
-.formucolor{
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    color: aliceblue;
-    padding: 40px;
-    /* margin: 25 auto; */
-    background-color: #333;
-    font-weight: bold;
-    border-radius: 0.8em;
-    margin-top: 200px;
-    box-shadow: inset 1px 1px 22px 4px rgba(0,0,0,0.85); 
-    z-index: 1; /*Para que un elemento no se superponga con otro junto*/
-}
-   
-.formucolor .btn{    /*Coloca bien el botón*/
-    margin-bottom: 20px;
-}
-.formucolor h4{
+/* .main{
+    display: flex;
+    align-items: end;
+    justify-content: center;
+} */
+.titulo{
+    font-family:fantasy;
+    margin-top:12em;
+    align-items:end;
     text-align: center;
-    text-decoration: underline;
-    font-family: fantasy;
-    margin-top:15px;
+}
+/*____________________________________________________________________________________________*/
+/* ESTILO DEL GRID Y SUS ELEMENTOS*/
+.dep{
+    display: flex;
+    justify-content:center;
+    align-items:center;
+    height:70px;
+    text-align: center;
+    font-family:fantasy;
+}
+.datos{
+    display:block;
+    justify-content:center;
+    text-align:center;
+}
+img{
+    width:200px;
+    height:280px;
+    border-radius: 5px;
+    /* border: solid black 1px;  */
+    
+}
+.imagen{
+    /* display: block; Para preguntar */
+    width:200px;
+    height:280px;
+    border-radius: 5px;
+    margin:auto;
+}
+.imagen:hover{  /*Estilo cuando el cursor esté encima de las imágenes*/
+    transition-delay: 0s, 0.5s; /*Esto es para marcar el tiempo que tarda en primro apararecer el color y luego el neon*/
+    
+    box-shadow: 
+               0 0 10px #1a2352,
+               0 0 30px #1a2352;  
+}
+.datos p{
+    color:rgb(135, 133, 133);
+    font-weight: bold;
+    margin-top: 5px;
+    margin-bottom: -3px;
 }
 
-.formucolor .btn {
-    border: 2px solid #333;
+/*____________________________________________________________________________________________*/
+/*BOTONES*/
+.ord{     /*Layout de los botones*/
+    display: flex;
+    text-align: center;
+    font-size: 1em;
+    margin-top: 10px;
+    justify-content: center;
+}
+
+.boton {
+    border: 2px solid #141c43;
     border-radius: 5px;
     position: relative;
     display: inline-block;
     font-size: .8em;
     letter-spacing: .1em;
-    color: #333;
+    color: #141c43;
     text-decoration: none;
     text-transform: uppercase;
     padding: 10px 30px;
@@ -122,40 +153,33 @@ ________________________________________________________________________________
     z-index: 1;
     overflow: hidden;
     transition: color 1s, box-shadow 1s; 
+    bottom: -40px;
 }
-.btn:hover {
+.boton:hover {
     color: white;
     transition-delay: 0s, 0.2s; /*Esto es para marcar el tiempo que tarda en primro apararecer el color y luego el neon*/
     box-shadow: 
-               0 0 10px #fff,
-               0 0 20px #fff,
-               0 0 40px #fff,
-               0 0 80px #fff,
-               0 0 160px #fff;
+               0 0 10px #1a2352,
+               0 0 20px #1a2352,
+               0 0 40px #1a2352,
+               0 0 80px #1a2352,
+               0 0 160px #1a2352;
 } 
-.btn::before {
+.boton::before {
     content: '';
     position: absolute;
     top: 0;
     left: -15px; /*Posición del objeto de atrás*/
     width: 0;
     height: 110%;
-    background: #333;
+    background: #141c43;
     transform: skewX(35deg);
     z-index: -1;
     transition: 0.7s;
 } 
-.btn:hover:before{
+.boton:hover:before{
     width: 140%;    /*Tamño relativo del elemmento de detrás. Por los desplazamientos y giros hacemos que sea un poco más grande para que llene el botón*/
 } 
-
-
-.display-5 {
-    color:  #fff;
-    font-family:'Poppins' ;
-    margin-bottom: 10px;
-}
-
 /*____________________________________________________________________________________________*/
 /*PIE DE PÁGINA*/
 .footer{
@@ -171,4 +195,3 @@ ________________________________________________________________________________
 .notas p{
     line-height:normal;
 }
-
