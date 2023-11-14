@@ -1,0 +1,277 @@
+<!--CAMBIAR LOS LINKS EN LA PARTE FINAL-->
+<!DOCTYPE html>
+  <head>
+    <title>Práctica_1</title>
+    <link type="text/css" rel="stylesheet" href="PprincipalFinal.css"/><!--Poner el css relacionado-->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"> </script>
+  </head>
+  <body>
+  <!--Creamos un contendor para todos los elementos de la página-->
+  <!--Header de la página-->
+  <!--HEADER-->
+  <section class="header"> <!--Queremos que ocupe todo el ancho del contenedor-->
+      <div class = "menu">
+      <div class = "logo-encabezado">
+        <a href="PprincipalFinal.html" class = "logo">SPORTGO</a> <!--Si clickas el logo/nombre de la página se recarga-->
+        <img src="/logosyfondos/Logo.png" class = "foto-logo" alt="Logo">
+      </div>
+    <!------------------------------------------------------------------------------------------->
+    <!-- vamos a utiliza flexbox-->
+        <nav class = "navegation">
+          <ul>
+            <!-- <li><a href="pgrid(alternativa2).html">Inicio</a></li> -->
+            <li><a href="PprincipalFinal.html">Deportes</a></li>
+            <li><a href="PprincipalFinal.html">Noticias</a></li>
+            <li><a href="PprincipalFinal.html">Patrocinadores</a></li>
+          </ul>
+        </nav>
+      </div>
+  </section>
+<!--Header de la página-->
+<!-- _______________________________________________________________________________________________________________________________     -->
+<!--CONTAINER-->
+    <div class="container"> 
+    <div class="row">
+        <div class="col">
+            <div class="espacio"></div>
+        </div>
+    </div>
+    <!------------------------------------------------------------------------------------------->  
+    <!--Título de la página Web-->
+    <div class="row">
+        <section class = "main">
+            <div class = "titulo">
+              <h1>Encuentra Tu Deporte</h1>
+              <hr>
+            </div>
+        </section>
+    </div>
+<!-- _______________________________________________________________________________________________________________________________     -->
+    <!--ROW-->
+    <div class="row"> <!--ROW PARA TODOS LOS DEPORTES(para que se puedan adaptar mejor a distintos tamaños)-->
+        <!--Dep1-->
+        <div class="col-xl-3 col-md-4 col-sm-6"> 
+            <div class="dep">
+                <h3>Natación</h3><!--Deporte 1-->
+            </div>
+            <div class = "datos">
+                    <div class="imagen">
+                        <a href="PdetalleFinal.html">
+                            <img src="/imagenes/Natacion.jpg" alt="Natacion" >
+                        </a>
+                    </div>
+                    <p>Deporte Acuático</p>
+                    <p>Fecha de origen: principios del siglo XIX</p>
+            </div>
+        </div>  <!--Dep1-->
+        <!------------------------------------------------------------------------------------------->   
+        <!--Dep2-->
+        <div class="col-xl-3 col-md-4 col-sm-6"> 
+            <div class="dep">
+                <h3>Esquí</h3><!--Deporte 2-->
+            </div>
+            <div class = "datos">
+                <div class="imagen">
+                    <a href="PdetalleFinal.html">
+                        <img src="/imagenes/Ski.jpg" alt="Ski">
+                    </a>
+                </div>  
+                <p>Deporte de invierno</p>
+                <p>Fecha de origen: 8000 a.C.</p>
+            </div>
+        </div>  <!--Dep2-->
+        <!------------------------------------------------------------------------------------------->
+        <!--Dep3-->
+        <div class="col-xl-3 col-md-4 col-sm-6"> 
+            <div class="dep">
+                <h3>Patinaje</h3><!--Deporte 3-->
+            </div>
+            <div class = "datos">
+                <div class="imagen">
+                    <a  href="PdetalleFinal.html">
+                        <img src="/imagenes/patinaje.jpg" alt="Patinaje">
+                    </a>
+                </div>
+                <p>Deporte sobre ruedas</p>
+                <p>Fecha de origen: 1818</p>    
+            </div>
+        </div>  <!--Dep3-->
+        <!------------------------------------------------------------------------------------------->
+        <!--Dep4-->
+        <div class="col-xl-3 col-md-4 col-sm-6"> 
+            <div class="dep">
+                <h3>Esgrima</h3><!--Deporte 4-->
+            </div>
+            <div class = "datos">
+                <div class="imagen">
+                    <a href="PdetalleFinal.html">
+                        <img src="/imagenes/Esgrima.jpg" alt="Esgrima">
+                    </a>
+                </div>    
+                <p>Deporte de contacto</p>
+                <p>Fecha de origen: 1474</p>
+            </div>
+        </div>  <!--Dep4-->
+        <!------------------------------------------------------------------------------------------->
+        <!--Dep5-->
+        <div class="col-xl-3 col-md-4 col-sm-6"> 
+            <div class="dep">
+                <h3>Atletismo</h3><!--Deporte 5-->
+            </div>
+            <div class = "datos">
+                <div class="imagen">
+                    <a href="PdetalleFinal.html">
+                        <img src="/imagenes/Atletismo.jpg" alt="Atletismo">
+                    </a>
+                </div>  
+                <p>Deporte de resistencia</p>
+                <p>Fecha de origen: 766 a.C.</p>
+            </div>
+        </div>  <!--Dep5-->
+        <!------------------------------------------------------------------------------------------->    
+        <!--Dep6-->
+        <div class="col-xl-3 col-md-4 col-sm-6"> 
+            <div class="dep">
+                <h3>Gimnasia Artística</h3><!--Deporte 6-->
+            </div>
+            <div class = "datos">
+                <div class="imagen">
+                    <a href="PdetalleFinal.html">
+                        <img src="/imagenes/Gimnasia Artística.jpeg" alt="Gimansia Artística">
+                    </a>
+                </div>  
+                <p>Deporte de elasticidad</p>
+                <p>Fecha de origen: 1894</p>
+            </div>
+        </div>  <!--Dep6-->
+        <!------------------------------------------------------------------------------------------->
+        <!--Dep7-->
+        <div class="col-xl-3 col-md-4 col-sm-6"> 
+            <div class="dep">
+                <h3>Hockey Patines</h3><!--Deporte 7-->
+            </div>
+            <div class = "datos">
+                <div class="imagen">
+                    <a href="PdetalleFinal.html">
+                        <img src="/imagenes/h1.jpg" alt="Hockey">
+                    </a>
+                </div>   
+                <p>Deporte sobre ruedas</p>
+                <p>Fecha de origen: 1882</p>
+            </div>
+        </div>  <!--Dep7-->
+        <!------------------------------------------------------------------------------------------->     
+        <!--Dep8-->
+        <div class="col-xl-3 col-md-4 col-sm-6"> 
+            <div class="dep">
+                <h3>Surf</h3><!--Deporte 8-->
+            </div>
+            <div class = "datos">
+                <div class="imagen">
+                    <a href="PdetalleFinal.html">
+                        <img src="/imagenes/Surf.jpg" alt="Surf">
+                    </a>
+                </div>    
+                <p>Deporte acuático</p>
+                <p>Fecha de origen: 1769</p>
+            </div>
+        </div>  <!--Dep 8-->
+        <!------------------------------------------------------------------------------------------->
+        <!--Dep9-->
+        <div class="col-xl-3 col-md-4 col-sm-6"> 
+            <div class="dep">
+                <h3>Boxeo</h3><!--Deporte 9-->
+            </div>
+            <div class = "datos">
+                <div class="imagen">
+                    <a href="PdetalleFinal.html">
+                        <img src="/imagenes/boxeo.jpg" alt="Boxeo">
+                    </a>
+                </div> 
+                <p>Deporte de contacto</p>
+                <p>Fecha de origen: 1681</p>
+            </div>
+        </div>  <!--Dep9-->
+        <!------------------------------------------------------------------------------------------->
+        <!--Dep10-->
+        <div class="col-xl-3 col-md-4 col-sm-6"> 
+            <div class="dep">
+                <h3>Gimnasia Rítmica</h3><!--Deporte 10-->
+            </div>
+            <div class = "datos">
+                <div class="imagen">
+                    <a href="PdetalleFinal.html">
+                        <img src="/imagenes/Gimnasia Rítmica.jpg" alt="Gimnasia Rítmica">
+                    </a>
+                </div>  
+                <p>Deporte de elasticidad</p>
+                <p>Fecha de origen: 1890</p>
+            </div>
+        </div>  <!--Dep10-->
+        <!------------------------------------------------------------------------------------------->
+        <!--Dep11-->
+        <div class="col-xl-3 col-md-4 col-sm-6">
+            <div class="dep">
+                <h3>Paracaidismo</h3><!--Deporte 11-->
+            </div>
+            <div class = "datos">
+                <div class="imagen">
+                    <a href="PdetalleFinal.html">
+                        <img src="/imagenes/Paracaidismo.jpg" alt="Paracaidismo">
+                    </a>
+                </div>    
+                <p>Deporte de Riesgo</p>
+                <p>Fecha de origen: 1793</p>
+            </div>
+        </div>  <!--Dep11-->
+        <!------------------------------------------------------------------------------------------->
+         <!--Dep12-->
+         <div class="col-xl-3 col-md-4 col-sm-6"> 
+            <div class="dep">
+                <h3>Motocross</h3><!--Deporte-->
+            </div>
+            <div class = "datos">
+                <div class="imagen">
+                    <a href="PdetalleFinal.html">
+                        <img src="/imagenes/MotoCross.jpg" alt="MotoCross">
+                    </a>
+                </div>   
+                <p>Deporte a motor</p>
+                <p>Fecha de origen: 1924</p>
+            </div>
+        </div>  <!--Dep12-->
+    </div><!--FIN DE ROW-->
+<!-- _______________________________________________________________________________________________________________________________     -->
+    <!--BOTONES-->
+    <div class="row"><!--Hacemos una Row con los dos botones-->
+        <div class="col-lg-2 offset-lg-7 col-md-3 offset-md-5">
+            <div class="ord">
+            <a class="boton" href="PprincipalFinal.html">
+                Inicio
+            </a> 
+            </div>
+        </div>
+        <!------------------------------------------------------------------------------------------->
+        <div class="col-lg-3 col-md-4">
+        <div class="ord">
+            <a class="boton" href="formulario1.html">
+                Nuevo elemento
+            </a> 
+        </div>
+        </div>
+    </div>
+  
+  </div><!--DIV DEL CONTAINER GENERAL-->
+<!-- _______________________________________________________________________________________________________________________________     -->
+    <!--PIE DE PÁGINA-->
+    <div class = "footer">
+        <div class = "notas">
+          <p>Página diseñada por Andrea Garrobo Guzmán Y Naroa Matín Simón</p>
+          <p><strong>Github:</strong> Garrobo08 y NaroaMS04</p>
+        </div>
+    </div>
+  </body>
+  </html> 
