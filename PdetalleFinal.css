@@ -1,7 +1,7 @@
 body{
 
    
-    background-image: url(fondo8.png);
+    background-image: url(/logosyfondos/fondo8.png);
     background-repeat: no-repeat;
     background-size: cover; /*Para que se adecuae al tamaño total del navegador*/
     background-attachment: fixed; /*Ponemos la imagen en un solo lugar*/
