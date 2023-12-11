@@ -1,4 +1,5 @@
-<<<<<<< HEAD
+
+//he puesto una s en const sports y nextId porque me daba error
 const sports = new Map();
 let nextId = 0;
 //Deportes de Ejemplo (la página se crea con ellos por defecto)
@@ -66,9 +67,9 @@ export function editSport(id, {nombre, fecha, descripcion, img, tipo, check}){
     sports.set(id, modificado);
 }
 
-=======
-const sports = new Map();
-let nextId = 0;
+
+const sportss = new Map();
+let nextIds = 0;
 //Deportes de Ejemplo (la página se crea con ellos por defecto)
 addSport({ 
     nombre: "Hockey Patines",
@@ -140,4 +141,3 @@ export function editSport(id, {nombre, fecha, descripcion, img, tipo, check}){
     sports.set(id, modificado); //Los elementos del mapa se actualizan de acuerdo con su id.
 }
 
->>>>>>> 632f7526947c77b978d585b9596321718430add9
