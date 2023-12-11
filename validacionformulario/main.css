@@ -1,0 +1,229 @@
+@import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,500&display=swap');
+
+* {
+	box-sizing: border-box;
+}
+
+body{
+    background-image: url(fondo8.png);
+    background-repeat: no-repeat;
+    background-size: cover; /*Para que se adecuae al tamaño total del navegador*/
+    background-attachment: fixed; /*Ponemos la imagen en un solo lugar*/
+    background-position: center; 
+}
+
+/* ESTILO DE LA CABECERA */
+.header{
+    background-color: #141c43;
+    font-size: 1.8rem;  /*Tamaño relativo de la fuente 16px*0.8*/
+    line-height: 1.1rem;
+    padding: 1.2rem 0;
+}
+.menu{   /*Contiene el logo y los botones, que de momento no llevan a ningún sitio*/
+    display: flex;
+    justify-content: space-around; /*Logo (<--), menu(-->), ocupando los dos extremos del contenedor*/
+    align-items: center;
+    flex-wrap:wrap; /*Si los elementos se superponen, el menu pasará a estar debajo. Es decir, logo y debajo la lista*/   
+}
+.logo-encabezado{
+    display:flex;
+    align-items: center;
+    justify-content:center;
+    flex-wrap: wrap;
+}
+.logo{
+    margin-left: 10px;
+    letter-spacing: 15px;
+    font-family: Georgia, 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 1.4em;
+    color: white;
+    text-decoration: none;
+}
+
+.logo:hover{
+    text-shadow: 0 0 30px #fff;
+    text-decoration: none;
+    color: #fff;
+}
+
+.foto-logo{
+    width: 90px;
+    height: 90px;
+    margin-top: 6px;
+}
+
+.navegation ul{
+    margin: 0;
+    padding: 0;
+    display: inline-flex;
+    justify-content:space-evenly; 
+    flex-wrap: wrap;
+}
+.navegation ul li {
+    display: inline-block;
+    padding: 10px;
+}
+.navegation ul li a{
+    font-size: 0.8em;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    color: white;
+    text-decoration: none;
+    font-family:Georgia, 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    transition-delay:all 0.4s linear ;
+}
+.navegation ul li a:hover{  /*Cuando el cursor esté encima de los elementos de la lista*/
+    background-color: #1a2352;
+    text-shadow: 0 0 30px #fff;
+}
+
+/*____________________________________________________________________________________________*/
+/*ESTILO DEL FORMULARIO*/
+.container{
+    margin-top: 60px;
+    margin-bottom: 60px;
+}
+.formucolor{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: aliceblue;
+    padding: 40px;
+    background-color:#141c43;
+    font-weight: bold;
+    border-radius: 0.8em;
+    box-shadow: inset 1px 1px 22px 4px rgba(0,0,0,0.85); 
+    z-index: 1; /*Para que un elemento no se superponga con otro junto*/
+}
+   
+
+.formucolor h4{
+    text-align: center;
+    text-decoration: underline;
+    font-family: fantasy;
+    margin-top:15px;
+}
+.row#tipo{
+    text-align: center;
+}
+
+.formucolor small{
+    color: red;
+    bottom: 0;
+    left: 0;
+    visibility: hidden;
+}
+
+.formucolor.error small{
+    visibility: visible;
+}
+
+
+.formucolor input {
+	border: 2px solid #f0f0f0;
+	border-radius: 4px;
+	display: block;
+	font-family: inherit;
+	font-size: 14px;
+	padding: 10px;
+	width: 100%;
+}
+
+.formucolor input:focus {
+	outline: 0;
+	border-color: #777;
+}
+
+.formucolor.success input {
+	border-color: #2ecc71;
+}
+
+.formucolor.error input {
+	border-color: #e74c3c;
+}
+
+
+.formucolor small {
+	color: #e74c3c;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	visibility: hidden;
+}
+
+.formucolor.error small {
+	visibility: visible;
+}
+
+/*____________________________________________________________________________________________*/
+/*BOTONES*/
+.botones{
+    text-align: center;
+    margin-top: 20px;
+}
+.btn{    /*Coloca bien el botón*/
+    margin-bottom: 20px;
+    background-color: #fff;
+}
+.btn {
+    border:solid 2px #141c43;
+    border-radius: 5px;
+    position: relative;
+    display: block;
+    font-size: .8em;
+    letter-spacing: .1em;
+    color: #141c43;
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 10px 30px;
+    transition: 1s;
+    z-index: 1;
+    overflow: hidden;
+    transition: color 1s;
+    text-align: center;}
+.btn:hover {
+    color: white;
+    transition-delay: 0s, 0.2s; /*Esto es para marcar el tiempo que tarda en primro apararecer el color y luego el neon*/
+    box-shadow: 
+               0 0 10px #fff,
+               0 0 20px #fff;
+} 
+.btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -15px; /*Posición del objeto de atrás*/
+    width: 0;
+    height: 110%;
+    background:#141c43;
+    transform: skewX(35deg);
+    z-index: -1;
+    transition: 0.7s;
+} 
+.btn:hover:before{
+    width: 140%;    /*Tamño relativo del elemmento de detrás. Por los desplazamientos y giros hacemos que sea un poco más grande para que llene el botón*/
+} 
+
+
+
+
+
+
+
+
+
+/*____________________________________________________________________________________________*/
+/*PIE DE PÁGINA*/
+.footer{
+    background-color: #141c43;
+    padding: 2rem; 
+}
+.notas{
+    color:white;
+    font-size:0.8rem;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-align: center;
+}
+.notas p{
+    line-height:normal;
+}
+
