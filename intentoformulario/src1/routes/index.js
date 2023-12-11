@@ -18,15 +18,15 @@ router.post('/new-entry', (req, res) => {
 
   const { title, author, image, description } = req.body;
 
-  if (!title || !author || !image || !description) {
+  if (!nombre || !Fecha_origen || !image || !description) {
     res.status(400).send("Entries must have a title and body");
     return;
   }
 
   var newBook = {
     id: uuidv4(),
-    title,
-    author,
+    nombre,
+    Fecha_origen,
     image,
     description
   };
