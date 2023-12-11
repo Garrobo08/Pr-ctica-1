@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link type= "text/css" rel="stylesheet" href="form.css" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"></head>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 </head>
 <body>
 <!--HEADER-->
@@ -40,18 +40,28 @@
 			<div class = "form-group col-md-6">
 			  <label  for="campo-nombre">Nombre</label>
 			  <input name="nombre" class = "form-control" type="text" id = "campo-nombre" placeholder="Escribe el nombre del Deporte" required>
+			  <!--MIRAR ESTAS DOS LINEAS SUPUESTAMENTE SON DOS ICONOS-->
+			  <i class = "fas fa-check-circle"></i>
+			  <i class = "fas fa-exclamation-circle"></i>
+			  <small>Error message</small>
+
 			</div>
 		  
 			<div class="form-group col-md-6">
 			  <!-- <textarea cols="30" rows="7"></textarea> -->
 			  <label for="campo-nombre">Fecha origen</label>
 			  <input name="fecha" class = "form-control" type="month" id = "campo-nombre" required> 
+			  <small>Error message</small>
 			</div>
 		  </div>
 	
 		   <!--Un text area solito. Completamente centrado y de ancho completo-->
+		   <!--HE AÑADIDO UN DIV A DESCRIPCION-->
+		   <div>
 		   <label class="form-label" for="descripcion">Descripción:</label>
 		   <textarea name="descripcion" id="descripcion" class="form-control mb-3" rows="4" cols="30" placeholder="Escriba un poco de historia" required></textarea>
+		   <small>Error message</small>
+		   </div>
 		
 		   <div class="row">
 			<div class="col-md-6 mb-3">
@@ -60,6 +70,7 @@
 				<span class="input-group-text" id="basic-addon3"></span>
 				<input name="img" type="search" id="foto" class="form-control" placeholder="Escriba la url de la imagen">
 			  </div>
+			  <small>Error message</small>
 		  </div>
 		  <div class="form-group col-md-6">
             <label class="form-label" for="Número-de-participantes">Número de participantes</label>
@@ -69,6 +80,7 @@
               <option value="en Equipo">En equipo</option>
               <option value="en Parejas">En parejas</option>
             </select>
+			<small>Error message</small>
           </div>
 		  </div>
 		  <div class="row" id="tipo">
@@ -106,7 +118,7 @@
 				  <input name="check" type="checkbox" value="Deporte de fondo" class="form-check-input">
 				  <label for="arte" class="form-check-label">Deporte de fondo</label>
 				</div>
-				
+				<small>Error message</small>
 			</div>
 		</div>
 
@@ -131,8 +143,6 @@
 		</div>
 	</div>
 
-	<script src="/src/form.js"></script> <!--Lo unico que estamos haciendo es que queremos entrar en el archivo de form.js-->
-	<script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
 
 </body>
 </html>

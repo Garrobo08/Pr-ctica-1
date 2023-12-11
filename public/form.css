@@ -96,6 +96,17 @@ body{
 .row#tipo{
     text-align: center;
 }
+
+.formucolor small{
+    color: red;
+    bottom: 0;
+    left: 0;
+    visibility: hidden;
+}
+
+.formucolor.error small{
+    visibility: visible;
+}
 /*____________________________________________________________________________________________*/
 /*BOTONES*/
 .botones{
