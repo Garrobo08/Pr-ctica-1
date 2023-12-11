@@ -1,8 +1,8 @@
-<<<<<<< HEAD
+
 import express from 'express';
 import * as server from './service.js';
 
-const router = express.Router();
+const routers = express.Router();
 
 router.get('/', (req, res) => {             //Cuando se pide al router '/' redigiirá a la página de inicio
     res.render('principal', {               //Que se carguie la página de inicio
@@ -53,7 +53,7 @@ router.post('/modify/:id', (req,res)=>{
     res.render("detail",{sport});
 })
 
-=======
+
 import express from 'express';
 import * as server from './service.js';
 
@@ -111,5 +111,4 @@ router.post('/modify/:id', (req,res)=>{
     res.render("detail",{sport});                                       //Express devuelve la página detail cargada con los nuevos parámetros de sport
 })
 
->>>>>>> 632f7526947c77b978d585b9596321718430add9
 export default router;
