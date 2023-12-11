@@ -130,12 +130,34 @@
 		  <p><strong>Github:</strong> Garrobo08 y NaroaMS04</p>
 		</div>
 	</div>
-<<<<<<< HEAD
-
-	<!-- <script src="form.js"></script> -->
-
-=======
->>>>>>> 2051ec71468c397dc417d8f78642da4e3c09e4f6
+	<script>
+		// Función para validar el formulario
+		function validarFormulario(event) {
+		  // Evitar que el formulario se envíe automáticamente
+		  event.preventDefault();
+	  
+		  // Obtener los valores de los campos
+		  const nombre = document.getElementById('campo-nombre').value.trim();
+		  const fecha = document.getElementById('campo-fecha').value.trim();
+		  const descripcion = document.getElementById('descripcion').value.trim();
+		  const img = document.getElementById('foto').value.trim();
+		  const tipo = document.getElementById('Número-de-participantes').value.trim();
+	  
+		  // Validar campos (puedes agregar más validaciones según sea necesario)
+		  if (nombre === '' || fecha === '' || descripcion === '' || img === '' || tipo === 'Elige...') {
+			// Mostrar mensaje de error
+			alert('Por favor, completa todos los campos obligatorios.');
+			// Redirigir a la página de error o a la principal
+			window.location.href = '/pagina-de-error.html'; // Cambia 'pagina-de-error.html' por tu página de error
+		  } else {
+			// Si los campos son válidos, enviar el formulario
+			event.target.submit();
+		  }
+		}
+	  
+		// Escuchar el evento submit del formulario y llamar a la función validarFormulario
+		document.querySelector('form').addEventListener('submit', validarFormulario);
+	  </script>
 </body>
 </html>
 
