@@ -138,17 +138,15 @@
 	  
 		  // Obtener los valores de los campos
 		  const nombre = document.getElementById('campo-nombre').value.trim();
-		  const fecha = document.getElementById('campo-fecha').value.trim();
+		  const fecha = document.getElementById('campo-nombre').value.trim();
 		  const descripcion = document.getElementById('descripcion').value.trim();
 		  const img = document.getElementById('foto').value.trim();
 		  const tipo = document.getElementById('Número-de-participantes').value.trim();
 	  
 		  // Validar campos (puedes agregar más validaciones según sea necesario)
 		  if (nombre === '' || fecha === '' || descripcion === '' || img === '' || tipo === 'Elige...') {
-			// Mostrar mensaje de error
+			// Mostrar mensaje de error como alerta
 			alert('Por favor, completa todos los campos obligatorios.');
-			// Redirigir a la página de error o a la principal
-			window.location.href = '/pagina-de-error.html'; // Cambia 'pagina-de-error.html' por tu página de error
 		  } else {
 			// Si los campos son válidos, enviar el formulario
 			event.target.submit();
@@ -160,4 +158,3 @@
 	  </script>
 </body>
 </html>
-
