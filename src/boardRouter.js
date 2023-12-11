@@ -11,8 +11,8 @@ router.get('/', (req, res) => {         //Cuando se pide al router '/' redigiir�
 
 router.post('/sport/new', (req, res) => {    //Cuando se pida /sport/new entonces se llamará a la función de add.sport
 
-    let { nombre, fecha, descripcion, img } = req.body;           //Objeto de {nombre, fecha, descripcion} =req.body  
-    boardService.addSport({ nombre, fecha, descripcion,img });    //Se llama a la función add.Sport
+    let { nombre, fecha, descripcion, img, tipo, check } = req.body;           //Objeto de {nombre, fecha, descripcion} =req.body  
+    boardService.addSport({ nombre, fecha, descripcion, img, tipo, check });    //Se llama a la función add.Sport
     res.render('saved_sport');                                    //Respuesta, se carga saved_sport
 });
 
