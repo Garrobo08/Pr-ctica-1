@@ -23,7 +23,39 @@ function checkInputs(){
     const tipoValue = tipo.nodeValue.trim(); 
 
     if (deporteValue === ''){
-        setErrorFor
+        setErrorFor(deporte,'No puede dejar este campo en blanco');
+    }else{
+        setSuccessFor(deporte);
+    }
+
+    if (fechaValue === ''){
+        setErrorFor(fecha,'No puede dejar este campo sin selccionar');
+    }else{
+        setSuccessFor(fecha);
+    }
+
+    if (descripcionValue === ''){
+        setErrorFor(descripcion,'No puede dejar este campo en blanco');
+    }else{
+        setSuccessFor(descripcion);
+    }
+
+    if (fotoValue === ''){
+        setErrorFor(foto,'No puede dejar este campo en blanco');
+    }else{
+        setSuccessFor(foto);
+    }
+
+    if (participantesValue === ''){
+        setErrorFor(participantes,'No puede dejar este campo sin selccionar');
+    }else{
+        setSuccessFor(participantes);
+    }
+
+    if (tipoValue === ''){
+        setErrorFor(tipo,'No puede dejar este campo sin seleccionar');
+    }else{
+        setSuccessFor(tipo);
     }
 
 }
