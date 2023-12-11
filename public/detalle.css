@@ -277,7 +277,18 @@ p#exp span{
 .boton:hover:before{
     width: 140%;    /*Tamño relativo del elemmento de detrás. Por los desplazamientos y giros hacemos que sea un poco más grande para que llene el botón*/
 } 
-
+#save{
+    display: flex;
+    align-self: center;
+    width: 20%;
+    background-color: #fff;
+    color:#141c43;
+    border-radius: 15px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    text-align: center;
+    justify-content: center;
+}
 /*____________________________________________________________________________________________*/
 /*PIE DE PÁGINA*/
 .footer{

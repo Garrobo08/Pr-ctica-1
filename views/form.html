@@ -39,19 +39,19 @@
 			<!--Vamos a hacer que el nombre y la fecha este uno al lado del otro-->
 			<div class = "form-group col-md-6">
 			  <label  for="campo-nombre">Nombre</label>
-			  <input name="nombre" class = "form-control" type="text" id = "campo-nombre" placeholder="Escribe el nombre del Deporte" required>
+			  <input name="nombre" class = "form-control" type="text" id = "campo-nombre" placeholder="Escribe el nombre del Deporte"  >
 			</div>
 		  
 			<div class="form-group col-md-6">
 			  <!-- <textarea cols="30" rows="7"></textarea> -->
 			  <label for="campo-nombre">Fecha origen</label>
-			  <input name="fecha" class = "form-control" type="month" id = "campo-nombre" required> 
+			  <input name="fecha" class = "form-control" type="month" id = "campo-nombre"  > 
 			</div>
 		  </div>
 	
 		   <!--Un text area solito. Completamente centrado y de ancho completo-->
 		   <label class="form-label" for="descripcion">Descripción:</label>
-		   <textarea name="descripcion" id="descripcion" class="form-control mb-3" rows="4" cols="30" placeholder="Escriba un poco de historia" required></textarea>
+		   <textarea name="descripcion" id="descripcion" class="form-control mb-3" rows="4" cols="30" placeholder="Escriba un poco de historia"  ></textarea>
 		
 		   <div class="row">
 			<div class="col-md-6 mb-3">
@@ -63,7 +63,7 @@
 		  </div>
 		  <div class="form-group col-md-6">
             <label class="form-label" for="Número-de-participantes">Número de participantes</label>
-            <select name="tipo" class="custom-select mr-sm-2" id="Número-de-participantes">
+            <select   name="tipo" class="custom-select mr-sm-2" id="Número-de-participantes">
               <option selected>Elige...</option>
               <option value="Individual">Individual</option>
               <option value="en Equipo">En equipo</option>
@@ -75,8 +75,8 @@
 			<div class="col-md-4 offset-md-4 mb-3">
 				<label for="intereses">Tipo de deporte:</label><br>
 				<div class="form-check form-check-inline">
-				  <input name="check" type="checkbox" value="Deporte de riego" class="form-check-input">
-				  <label for="tecnologia" class="form-check-label">Deporte de riego</label>
+				  <input name="check" type="checkbox" value="Deporte de riesgo" class="form-check-input">
+				  <label for="tecnologia" class="form-check-label">Deporte de riesgo</label>
 				</div>
 				<div class="form-check form-check-inline">
 				  <input name="check" type="checkbox" value="Deporte acuático" class="form-check-input">
@@ -180,6 +180,7 @@
                 '(\\:\\d+)?(\\/[-a-z\\d%_.~+]*)*' + // puerto y ruta
                 '(\\?[;&a-z\\d%_.~+=-]*)?' + // parámetros de consulta
                 '(\\#[-a-z\\d_]*)?$', 'i'); // fragmento
+
 				//todo lo anterior es lo que incluyen un url y es lo que tiene que tener la url para que se valide
             return !!pattern.test(str);
         }
@@ -187,6 +188,8 @@
         // Escuchar el evento submit del formulario y llamar a la función validarFormulario
         document.querySelector('form').addEventListener('submit', validarFormulario);
     </script>
+
+
 </body>
 </html>
 
