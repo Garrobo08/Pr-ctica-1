@@ -22,46 +22,52 @@ addSport({
     check:"Deporte sorbre ruedas",
     tipo:"Individual",
     reglamento:[{
- 
+        
     }]
      });
 
 
 
+
+
+//FUNCIONES
+//Añadir nuevo elemento
 export function addSport(sport) {
     let id = nextId++;
     sport.id = id.toString();
     sports.set(sport.id, sport);   //La clave de este sport es la sport.id
 }
-
+//Eliminar elemento, como los elementos pertenecen a un mapa borramos la clave y su valor asociado
 export function deleteSport(id){
-    sports.delete(id);           //Se borra la el sport con el id que se introduzca
+    sports.delete(id);            //Se borra el elemento sport de sports que tenga una clave con ese id 
 }
 
 export function getSports(){
-    return [...sports.values()]; //Recorremos el mapa 
+    return [...sports.values()]; //Recorremos el mapa y se muestra
 }
 
 export function getSport(id){
     return sports.get(id);       //Devuelve el id del sport
 }
 
+//Añadir subelemento
 export function addRule(id,{nombre, info, dir}) {
     const modificado = sports.get(id);   //La id del elemento es un parámetro que se mantiene inmutable ante las operaciones del subelemento
-    if (!modificado.reglamento) {        //Para evitar que esté Undefied
+    if (!modificado.reglamento) {        //Para evitar que esté Undefined y de problemas
         modificado.reglamento = [];
     }
-    let regla = {nombre, info, dir};   
+    let regla = {nombre, info, dir};        
     modificado.reglamento.push(regla);   //Reglamento es un array de reglas, las reglas son objetos con tres propiedades
 }
+//Función para editar un elemento de mapa (necesitamos su clave, modificamos sus parámetros)
 export function editSport(id, {nombre, fecha, descripcion, img, tipo, check}){
     const modificado = sports.get(id);
-    modificado.nombre = nombre !== undefined ? nombre : modificado.nombre;
+    modificado.nombre = nombre !== undefined ? nombre : modificado.nombre;      //Si nombre no es undefined entonces nombre:modficado.nombre
     modificado.fecha = fecha !== undefined ? fecha : modificado.fecha;
     modificado.descripcion = descripcion !== undefined ? descripcion : modificado.descripcion;
     modificado.img = img !== undefined ? img : modificado.img;
     modificado.tipo = tipo !== undefined ? tipo : modificado.tipo;
     modificado.check = check !== undefined ? check : modificado.check;
-    sports.set(id, modificado);
+    sports.set(id, modificado); //Los elementos del mapa se actualizan de acuerdo con su id.
 }
 
