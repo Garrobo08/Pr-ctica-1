@@ -27,6 +27,9 @@ router.get('/sport/:id', (req, res) => {
     let sport = server.getSport(req.params.id);
     res.render('detail', { sport });      //Se carga show_sport
 });
+router.get('/new', (req,res) =>{
+    res.render('form');
+})
 
 router.get('/sport/:id/delete', (req, res) => {
 
@@ -34,5 +37,19 @@ router.get('/sport/:id/delete', (req, res) => {
 
     res.render('deleted_sport');
 });
+
+//Obtener Id del elemento que vamos a editar
+router.get('/editar/:id', (req, res) =>{
+    let sport = server.getSport(req.params.id);
+    res.render("edit_sport",{sport});
+})
+
+router.post('/modify/:id', (req,res)=>{
+    let { nombre, fecha, descripcion, img, tipo, check } = req.body;
+    let sport ={ nombre, fecha, descripcion, img, tipo, check};
+    server.editSport(req.params.id, sport);
+    sport = server.getSport(req.params.id);
+    res.render("detail",{sport});
+})
 
 export default router;

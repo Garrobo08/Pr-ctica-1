@@ -4,7 +4,7 @@ let nextId = 0;
 addSport({ 
     nombre: "Hockey Patines",
     fecha:'2004-12', 
-    descripcion: "Hockey patines es una de las muchas variantes del hockey. Su creacion fue a finales del siglo XIX y se le acredita al estadounidense Edward Crawford,quien buscó crear un variante del hockey sobre hielo que pudiese jugarse sobre madera. Su práctica se extendió muy rápido por Europa y a principios del siglo XX llegó también a Latinoamérica. En el caso de España, el deporte se introdujo en septiembre de 1936, cuando se federó el primer equipo en Sardañola del Vallés (Barcelona).Un partido de hockey patines se juega en una pista, ya sea o de parquet o terrazo, de dimeniones 40x20 metros. Alrededor de la pista debe gaber una valla que llegue a la altura de la cintura de los jugadores proximadamente. La pista se divide en dos campos y posee dos porterías, de 1,7x1 metros, situadas cada una a un extremo de la pista. A lo largo de un partido se enfrentarán dos equipos con el objetivo de marcar más goles que el rival. El equipo que más goles consiga al acabar el partido será el ganador.Actualmente es un deporte practicado especialmente en el norte de España destacando las zonas de Asturias y Cataluña. La Selección Española ha conseguido ser campeona del mundo más de 15 veces, destacando tanto la selección masculina como la femenina",
+    descripcion:"Hockey patines es una de las muchas variantes del hockey. Su creacion fue a finales del siglo XIX y se le acredita al estadounidense Edward Crawford,quien buscó crear un variante del hockey sobre hielo que pudiese jugarse sobre madera. Su práctica se extendió muy rápido por Europa y a principios del siglo XX llegó también a Latinoamérica. En el caso de España, el deporte se introdujo en septiembre de 1936, cuando se federó el primer equipo en Sardañola del Vallés (Barcelona).Un partido de hockey patines se juega en una pista, ya sea o de parquet o terrazo, de dimeniones 40x20 metros. Alrededor de la pista debe gaber una valla que llegue a la altura de la cintura de los jugadores proximadamente. La pista se divide en dos campos y posee dos porterías, de 1,7x1 metros, situadas cada una a un extremo de la pista. A lo largo de un partido se enfrentarán dos equipos con el objetivo de marcar más goles que el rival. El equipo que más goles consiga al acabar el partido será el ganador.Actualmente es un deporte practicado especialmente en el norte de España destacando las zonas de Asturias y Cataluña. La Selección Española ha conseguido ser campeona del mundo más de 15 veces, destacando tanto la selección masculina como la femenina",
     img:"https://upload.wikimedia.org/wikipedia/commons/thumb/c/ce/Tasha_Lee.jpg/1200px-Tasha_Lee.jpg",
     check:"Deporte de contacto",
     tipo:"en Equipo",
@@ -53,5 +53,15 @@ export function addRule(id,{nombre, info, dir}) {
     }
     let regla = {nombre, info, dir};   
     modificado.reglamento.push(regla);   //Reglamento es un array de reglas, las reglas son objetos con tres propiedades
+}
+export function editSport(id, {nombre, fecha, descripcion, img, tipo, check}){
+    const modificado = sports.get(id);
+    modificado.nombre = nombre !== undefined ? nombre : modificado.nombre;
+    modificado.fecha = fecha !== undefined ? fecha : modificado.fecha;
+    modificado.descripcion = descripcion !== undefined ? descripcion : modificado.descripcion;
+    modificado.img = img !== undefined ? img : modificado.img;
+    modificado.tipo = tipo !== undefined ? tipo : modificado.tipo;
+    modificado.check = check !== undefined ? check : modificado.check;
+    sports.set(id, modificado);
 }
 
