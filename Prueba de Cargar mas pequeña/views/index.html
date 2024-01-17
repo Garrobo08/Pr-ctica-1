@@ -1,0 +1,24 @@
+<html>
+
+<head>
+    <script src="app.js"></script>
+</head>
+
+<body>
+
+    <h1>Superheroes</h1>
+
+    <!-- Div para mostrar los nombres de los superhéroes -->
+    <div id='superheroes'>
+        <!-- Plantilla Handlebars para iterar sobre el array de superhéroes y mostrar sus nombres -->
+        {{#superheroes}}
+        <p>{{nombre}}</p>
+        {{/superheroes}}
+    </div>
+
+    <!-- Botón para cargar más superhéroes -->
+    <button onclick='loadMore()'>Load more</button>
+
+</body>
+
+</html>
