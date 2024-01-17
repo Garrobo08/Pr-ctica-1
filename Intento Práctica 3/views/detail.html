@@ -1,0 +1,156 @@
+<html>
+	<head>
+		<title>Página detalle</title>
+		<link type="text/css" rel="stylesheet" href="/detalle.css"/>  
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"> </script>
+	</head>
+	<body class="body">
+	<!--HEADER-->
+	<section class="header"> <!--Queremos que ocupe todo el ancho del contenedor-->
+	  <div class = "menu">
+	  <div class = "logo-encabezado">
+		<a href="/" class = "logo" >SPORTGO </a> <!--Si clickas el logo/nombre de la página se recarga-->
+		<img src="/Logo.png" class = "foto-logo" alt="Logo">
+	  </div>
+	<!------------------------------------------------------------------------------------------->
+	<!-- vamos a utiliza flexbox-->
+		<nav class = "navegation">
+		  <ul>
+			<!-- <li><a href="pgrid(alternativa2).html">Inicio</a></li> -->
+			<li><a href="/">Deportes</a></li>
+			<li><a href="">Noticias</a></li>
+			<li><a href="/">Patrocinadores</a></li>
+		  </ul>
+		</nav>
+	  </div>
+	</section>
+	<!-- _______________________________________________________________________________________________________________________________     -->
+<!--CONTAINER-->
+<div class="container"> <!--Metemos toda la página dentro de un contedor Bootstrap para facilitar la adaptación de ésta a los distintos tamaños-->
+	<h1>{{sport.nombre}}</h1>
+	<!------------------------------------------------------------------------------------------->
+    <!--Texto+Datos-->   
+	<section class="info">
+		<div class="row" id="tabla">
+			<div class="col-md-3 col-sm-4" id="año">
+				<div>
+					<span class="negrita">{{sport.fecha}}</span> 
+				</div>
+			</div>
+			<div class="col-md-5 col-sm-4" id="tipo">
+				<div>
+				<span class="negrita">{{sport.check}}</span> 
+				</div>
+			</div>
+			<div class="col-md-4 col-sm-4" id="num">
+			  <div>
+			  <span class="negrita">Deporte {{sport.tipo}}</span>
+			  </div>
+		  </div>
+		</div>
+     <!------------------------------------------------------------------------------------------->
+	 <div id="info" class="row"><!--Descripción del elementno-->
+        <div class="col-xl-8">
+          {{sport.descripcion}}
+        </div>
+        <div class="col-xl-4" id="imagen">
+            <img class="img-fluid" src="{{sport.img}}" id="h1">
+        </div>    
+    </div>  
+     <!------------------------------------------------------------------------------------------->
+     <!------------------------------------------------------------------------------------------->
+	 <div class="row" id="reglas">
+		<div class="col">
+		  <h2 id="tit2">Reglamento</h2><!--Subelemento-->
+		 {{#sport.reglamento}} 
+		  <ul>
+		 	<li><span class="negrita">{{nombre}}: </span>{{info}}
+				<ul>
+				<li>{{dir}}</li>
+				</ul>
+			</li>
+		  </ul>			 
+		 {{/sport.reglamento}}
+
+		 {{^sport.reglamento}}
+		 <p>No se han añadido reglas todavía</p>	<!--Debería salir en las nuevas páginas-->
+		 {{/sport.reglamento}}
+		</div>
+	  </div>
+ <!------------------------------------------------------------------------------------------->
+ <div class="row" id="subelementos"> <!--Formulario-->
+	<form action="/newRegla/{{sport.id}}" class="form1" method="post" >
+		<h4>Añadir Regla</h4>
+		<div>
+		<div>
+		  <label>Nombre: </label>
+		  <input name="nombre" class="form-control" placeholder="Introduzca en nombre de la regla" required>
+		</div>
+		<div class="mb-3">
+		  <label class="form-label">Descripción:</label>
+		  <textarea name="info" class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Introduzca información sobre la regla" required></textarea>
+		</div>
+		<!----->
+		<p id="exp">Dirigida a: <span>(Opcional)</span></p>
+		<div  class="expulsion">
+		<div class="mb-3 form-check">
+		  <input name="dir" type="checkbox" value="Jugador" class="form-check-input">
+		  <label>Jugador</label>
+		</div>
+		<div class="mb-3 form-check">
+		  <input name="dir" type="checkbox" value="Entrenador" class="form-check-input">
+		  <label>Entrenador</label>
+		</div>
+		<div class="mb-3 form-check">
+		  <input name="dir" type="checkbox"  value="Staff" class="form-check-input">
+		  <label>Staff</label>
+		</div>
+		</div>
+		<!----->
+		</div>
+		<button type="submit" id="save">Guardar</button>
+	</form>
+</div>
+</section> 
+<!-- _______________________________________________________________________________________________________________________________     -->  
+<!--BOTONES-->
+<div class="row" id="botones">
+	<div class="col-sm-2 col-md-2"  id="boton">
+	  <div class="ord">
+		<a class="boton" href="/sport/{{sport.id}}/delete">
+			Borrar
+		</a> 
+		</div>
+	</div>
+	<div class="col-sm-2 col-md-2"  id="boton">
+	  <div class="ord">
+		<a class="boton" href="/editar/{{sport.id}}">
+			Editar
+		</a> 
+		</div>
+	</div>
+	<div class="col-sm-2 col-md-2"  id="boton">
+	  <div class="ord">
+		<a class="boton" href="/">
+			Ver todos los elementos
+		</a> 
+		</div>
+	</div>            
+  </div>
+</div><!--Fin del Container-->
+<!-- _______________________________________________________________________________________________________________________________     -->
+<!--PIE DE PÁGINA-->
+<section class = "footer">
+	<div class = "notas">
+	  <p>Página diseñada por Andrea Garrobo Guzmán Y Naroa Matín Simón</p>
+	  <p><strong>Github:</strong> Garrobo08 y NaroaMS04</p>
+	</div>
+  </section>
+  </body>
+	  
+  </html>
+</body>
+</html>
