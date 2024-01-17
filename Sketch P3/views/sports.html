@@ -1,0 +1,16 @@
+{{#sports}}
+<div class="col-xl-3 col-md-4 col-sm-6" href="sport/{{id}}"> 
+    <div class="dep">
+        <h3>{{nombre}}</h3><!--Deporte 1-->
+    </div>
+    <div class = "datos">
+            <div class="imagen">
+                <a href="sport/{{id}}">  <!--Página detalle del elemento seleeccionado-->
+                    <img src="{{img}}" alt="{{nombre}}" >
+                </a>
+            </div>
+            <p>Tipo: {{check}}</p> 
+            <p>Fecha de origen: {{fecha}}</p>
+    </div>
+</div>  <!--Dep-->
+{{/sports}}
