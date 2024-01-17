@@ -130,6 +130,16 @@ img{
 
 /*____________________________________________________________________________________________*/
 /*BOTONES*/
+#carga{
+    justify-content: center;
+
+}
+#carga button{
+    width: 90%;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
 .ord{     /*Layout de los botones*/
     display: flex;
     text-align: center;
@@ -195,3 +205,16 @@ img{
 .notas p{
     line-height:normal;
 }
+/*BARRA DE BÚSQUEDA*/
+.filtro{
+    display: none;
+}
+#buscador .btn{
+    color: #fff;
+    border-color: #fff;
+}
+#buscador .btn:hover{
+    background-color: #22284569;
+    color: #ffffff;
+    font-weight: bolder;
+}   

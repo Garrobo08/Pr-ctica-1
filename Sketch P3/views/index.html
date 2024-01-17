@@ -24,7 +24,12 @@
 				<!-- <li><a href="pgrid(alternativa2).html">Inicio</a></li> -->
 				<li><a href="/">Deportes</a></li>
 				<li><a href="/">Noticias</a></li>
-				<li><a href="/">Patrocinadores</a></li>
+				<a >
+                    <div class="input-group" id="buscador">
+                        <input type="search" class="form-control" placeholder="Buscar"/>
+                        <button type="button" class="btn" data-mdb-ripple-init>Buscar</button>
+                    </div>
+                </a>
 			  </ul>
 			</nav>
 		  </div>
@@ -82,8 +87,8 @@
     </div>
      -->
          <!-- Botón para cargar más deportes -->
-    <div class="row">
-        <button onclick='loadMore()' id="carga">Cargar Más</button>
+    <div class="row" id="carga">
+        <button class="boton" onclick='loadMore()'>Cargar Más</button>
     </div>    
      <div class="row"><!--Hacemos una Row con los dos botones-->
         <div class="col-lg-2 offset-lg-7 col-md-3 offset-md-5">

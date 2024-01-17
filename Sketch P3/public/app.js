@@ -1,3 +1,4 @@
+//BOTÓN CARGAR MÁS ELEMENTOS
 const NUM_RESULTS = 4;
 
 let loadMoreRequests = 0;
@@ -17,3 +18,9 @@ async function loadMore(){
 
     loadMoreRequests++;
 }
+//BARRA DE BÚSQUEDA
+document.addEventListener('navegador',e=>{
+    console.log(e.target.value);
+});   
+
+
