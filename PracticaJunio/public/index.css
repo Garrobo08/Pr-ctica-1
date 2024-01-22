@@ -1,0 +1,220 @@
+ /* div{
+    border:solid 1px black;
+}     */
+
+/* ESTILO DE LA CABECERA */
+.header{
+    background-color: #141c43;
+    font-size: 1.8rem;  /*Tamaño relativo de la fuente 16px*0.8*/
+    line-height: 1.1rem;
+    padding: 1.2rem 0;
+    position: fixed;   /*Queremos que nos siga el bloque header y sus contenidos mientras bajamos en la página web.*/
+    left: 0;
+    top: 0;
+    right: 0;
+}
+.menu{   /*Contiene el logo y los botones, que de momento no llevan a ningún sitio*/
+    display: flex;
+    justify-content: space-around; /*Logo (<--), menu(-->), ocupando los dos extremos del contenedor*/
+    align-items: center;
+    flex-wrap:wrap; /*Si los elementos se superponen, el menu pasará a estar debajo. Es decir, logo y debajo la lista*/   
+}
+.logo-encabezado{
+    display:flex;
+    align-items: center;
+    justify-content:center;
+    flex-wrap: wrap;
+}
+.logo{
+    margin-left: 10px;
+    letter-spacing: 15px;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-size: 1.4em;
+    color: white;
+    text-decoration: none;
+}
+
+.logo:hover{
+    text-shadow: 0 0 30px #fff;
+}
+
+.foto-logo{
+    width: 90px;
+    height: 90px;
+    /* margin-left: -10px ; */
+}
+
+.navegation ul{
+    margin: 0;
+    padding: 0;
+    display: inline-flex;
+    justify-content:space-evenly; 
+    flex-wrap: wrap;
+}
+.navegation ul li {
+    display: inline-block;
+    padding: 10px;
+}
+.navegation ul li a{
+    font-size: 0.8em;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    color: white;
+    text-decoration: none;
+    font-family:Georgia, 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    transition-delay:all 0.4s linear ;
+}
+.navegation ul li a:hover{  /*Cuando el cursor esté encima de los elementos de la lista*/
+    background-color: #1a2352;
+    text-shadow: 0 0 30px #fff;
+}
+.container{
+    margin-top: 40px; /*Para que no se superponga ña barra del header*/
+    margin-bottom: 80px; /*Para que no se superponga con el footer*/
+}
+/*____________________________________________________________________________________________*/
+/*ESTILO DEL TÍTULO*/
+/* .main{
+    display: flex;
+    align-items: end;
+    justify-content: center;
+} */
+.titulo{
+    font-family:fantasy;
+    margin-top:12em;
+    align-items:end;
+    text-align: center;
+}
+/*____________________________________________________________________________________________*/
+/* ESTILO DEL GRID Y SUS ELEMENTOS*/
+.dep{
+    display: flex;
+    justify-content:center;
+    align-items:center;
+    height:70px;
+    text-align: center;
+    font-family:fantasy;
+}
+.datos{
+    display:block;
+    justify-content:center;
+    text-align:center;
+}
+img{
+    width:200px;
+    height:280px;
+    border-radius: 5px;
+    /* border: solid black 1px;  */
+    
+}
+.imagen{
+    /* display: block; Para preguntar */
+    width:200px;
+    height:280px;
+    border-radius: 5px;
+    margin:auto;
+}
+.imagen:hover{  /*Estilo cuando el cursor esté encima de las imágenes*/
+    transition-delay: 0s, 0.5s; /*Esto es para marcar el tiempo que tarda en primro apararecer el color y luego el neon*/
+    
+    box-shadow: 
+               0 0 10px #1a2352,
+               0 0 30px #1a2352;  
+}
+.datos p{
+    color:rgb(135, 133, 133);
+    font-weight: bold;
+    margin-top: 5px;
+    margin-bottom: -3px;
+}
+
+/*____________________________________________________________________________________________*/
+/*BOTONES*/
+#carga{
+    justify-content: center;
+
+}
+#carga button{
+    width: 90%;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.ord{     /*Layout de los botones*/
+    display: flex;
+    text-align: center;
+    font-size: 1em;
+    margin-top: 10px;
+    justify-content: center;
+}
+
+.boton {
+    border: 2px solid #141c43;
+    border-radius: 5px;
+    position: relative;
+    display: inline-block;
+    font-size: .8em;
+    letter-spacing: .1em;
+    color: #141c43;
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 10px 30px;
+    transition: 1s;
+    z-index: 1;
+    overflow: hidden;
+    transition: color 1s, box-shadow 1s; 
+    bottom: -40px;
+}
+.boton:hover {
+    color: white;
+    transition-delay: 0s, 0.2s; /*Esto es para marcar el tiempo que tarda en primro apararecer el color y luego el neon*/
+    box-shadow: 
+               0 0 10px #1a2352,
+               0 0 20px #1a2352,
+               0 0 40px #1a2352,
+               0 0 80px #1a2352,
+               0 0 160px #1a2352;
+} 
+.boton::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -15px; /*Posición del objeto de atrás*/
+    width: 0;
+    height: 110%;
+    background: #141c43;
+    transform: skewX(35deg);
+    z-index: -1;
+    transition: 0.7s;
+} 
+.boton:hover:before{
+    width: 140%;    /*Tamño relativo del elemmento de detrás. Por los desplazamientos y giros hacemos que sea un poco más grande para que llene el botón*/
+} 
+/*____________________________________________________________________________________________*/
+/*PIE DE PÁGINA*/
+.footer{
+    background-color: #141c43;
+    padding: 2rem; 
+}
+.notas{
+    color:white;
+    font-size:0.8rem;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-align: center;
+}
+.notas p{
+    line-height:normal;
+}
+/*BARRA DE BÚSQUEDA*/
+.filtro{
+    display: none;
+}
+#buscador .btn{
+    color: #fff;
+    border-color: #fff;
+}
+#buscador .btn:hover{
+    background-color: #22284569;
+    color: #ffffff;
+    font-weight: bolder;
+}   
