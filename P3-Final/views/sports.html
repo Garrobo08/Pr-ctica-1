@@ -1,0 +1,22 @@
+	<!--Dep-->
+    {{#sports}}
+    <div class="col-xl-3 col-md-4 col-sm-6" href="sport/{{id}}"> 
+        <div class="dep">
+            <h3>{{nombre}}</h3><!--Deporte 1-->
+        </div>
+        <div class = "datos">
+                <div class="imagen">
+                    <a href="sport/{{id}}">  <!--Página detalle del elemento seleccionado-->
+                        <img src="{{img}}" alt="{{nombre}}">
+                    </a>
+                </div>
+                <p>Tipo:<span class="tipo">{{check}}</span></p> 
+                <p>Fecha de origen: {{fecha}}</p>
+                <button class="btn-favorito" onclick="favorite(this)" dep-id="{{id}}">&#9734;</button>
+        </div>  
+    </div>  <!--Dep-->
+    {{/sports}}
+    <!--Si no hay ningún elemento sport entonces sale el mensage-->
+    <!-- {{^sports}}  
+    <p>No hay deportes todavía.</p>
+    {{/sports}} -->
